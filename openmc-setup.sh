@@ -36,7 +36,7 @@
 # https://github.com/du-ards/openmc-setup
 #
 #
-# Todo: exception handling (symlink already exists )
+# Todo: exception handling (symlink already exists; cmake server down; xs repo suffix prob)
 #
 echo
 echo "*** DU-ARDS OpenMC setup script ***"
@@ -91,15 +91,15 @@ cd $dir
 echo "*** API installation complete ***"
 echo
 echo "*** Downloading cross-section libraries ***"
-wget https://anl.box.com/shared/static/9igk353zpy8fn9ttvtrqgzvw1vtejoz6.xz
+wget https://anl.box.com/shared/static/uhbxlrx7hvxqw27psymfbhi7bx7s6u6a.xz
 echo
 echo "*** Extracting ***"
-tar xf 9igk353zpy8fn9ttvtrqgzvw1vtejoz6.xz
+tar xf uhbxlrx7hvxqw27psymfbhi7bx7s6u6a.xz
 echo 
 echo "*** Setting up environment variables ***"
 echo "export OPENMC_CROSS_SECTIONS='$dir/endfb-viii.0-hdf5/cross_sections.xml'" >> $HOME/.bashrc
 source $HOME/.bashrc
 cd $dir
-echo "OpenMC setup done!"
+echo "*** OpenMC setup done!****"
 echo "Please try the following: "
 echo "openmc --version"
